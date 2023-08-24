@@ -1,25 +1,24 @@
-/* const { AuthenticationError } = require('apollo-server-express');
-const { User, Thought } = require('../models');
+const { AuthenticationError } = require('apollo-server-express');
+const { User, FoodTruck } = require('../models'); // Update the import here
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
     users: async () => {
-      return User.find().populate('thoughts');
+      return User.find().populate('foodTrucks'); // Update to 'foodTrucks'
     },
     user: async (parent, { username }) => {
-      return User.findOne({ username }).populate('thoughts');
+      return User.findOne({ username }).populate('foodTrucks'); // Update to 'foodTrucks'
     },
-    thoughts: async (parent, { username }) => {
-      const params = username ? { username } : {};
-      return Thought.find(params).sort({ createdAt: -1 });
+    foodTrucks: async () => {
+      return FoodTruck.find(); // Fetch all food trucks
     },
-    thought: async (parent, { thoughtId }) => {
-      return Thought.findOne({ _id: thoughtId });
+    foodTruck: async (parent, { foodTruckId }) => {
+      return FoodTruck.findOne({ _id: foodTruckId }); // Fetch a single food truck
     },
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id }).populate('thoughts');
+        return User.findOne({ _id: context.user._id }).populate('foodTrucks'); // Update to 'foodTrucks'
       }
       throw new AuthenticationError('You need to be logged in!');
     },
@@ -48,74 +47,17 @@ const resolvers = {
 
       return { token, user };
     },
-    addThought: async (parent, { thoughtText }, context) => {
-      if (context.user) {
-        const thought = await Thought.create({
-          thoughtText,
-          thoughtAuthor: context.user.username,
-        });
-
-        await User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $addToSet: { thoughts: thought._id } }
-        );
-
-        return thought;
-      }
-      throw new AuthenticationError('You need to be logged in!');
+    addFoodTruck: async (parent, { name, cuisine, location }) => {
+      const foodTruck = await FoodTruck.create({
+        name,
+        cuisine,
+        location,
+      });
+      return foodTruck;
     },
-    addComment: async (parent, { thoughtId, commentText }, context) => {
-      if (context.user) {
-        return Thought.findOneAndUpdate(
-          { _id: thoughtId },
-          {
-            $addToSet: {
-              comments: { commentText, commentAuthor: context.user.username },
-            },
-          },
-          {
-            new: true,
-            runValidators: true,
-          }
-        );
-      }
-      throw new AuthenticationError('You need to be logged in!');
-    },
-    removeThought: async (parent, { thoughtId }, context) => {
-      if (context.user) {
-        const thought = await Thought.findOneAndDelete({
-          _id: thoughtId,
-          thoughtAuthor: context.user.username,
-        });
-
-        await User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $pull: { thoughts: thought._id } }
-        );
-
-        return thought;
-      }
-      throw new AuthenticationError('You need to be logged in!');
-    },
-    removeComment: async (parent, { thoughtId, commentId }, context) => {
-      if (context.user) {
-        return Thought.findOneAndUpdate(
-          { _id: thoughtId },
-          {
-            $pull: {
-              comments: {
-                _id: commentId,
-                commentAuthor: context.user.username,
-              },
-            },
-          },
-          { new: true }
-        );
-      }
-      throw new AuthenticationError('You need to be logged in!');
-    },
+    // ... other resolvers if needed
   },
+
 };
 
 module.exports = resolvers;
-*/
