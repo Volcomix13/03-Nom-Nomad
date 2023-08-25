@@ -1,0 +1,29 @@
+[
+    {
+      "name": "Mellizoz Tacos",
+      "location": "Call for address at (512) 916-4996",
+      "Cuisine": "Mexican", 
+      "Reviews": "It's alright"
+    },
+    {
+     "name": "Hey! Cupcake",
+     "location": " 4209 Airport Blvd, Austin, TX 78722",
+     "Cuisine": "Dessert", 
+     "Reviews": "Will visit again"
+    },
+    {
+    "name": "HKnolls of Slaughter Creek",
+    "location": "333 Pedigree Drive, Austin, TX, 78748",
+    "Cuisine": "Asian", 
+    "Reviews": "The best!"
+    },
+    {
+    "name": "Torchys",
+    "location": "Somewhere in Austin",
+    "FoodType": "Tacos", 
+    "Reviews": "Meh"
+    }
+]
+    
+
+  

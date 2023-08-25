@@ -1,3 +1,4 @@
+const db = require('../config/connection');
 const mongoose = require('mongoose');
 const {User, FoodTruck} = require('../models')
 const userSeeds = require('./userSeeds.json');
@@ -14,10 +15,10 @@ db.once( 'open', async () => {
     for (let i = 0; i < truckSeeds.length; i++) {
       const foodTruck = await FoodTruck.create(truckSeeds[i]);
       const user = await User.findOneAndUpdate(
-        { username: foodTruck.name }, // Update this to match your user association logic
+        { username: foodTruck.name }, 
         {
           $addToSet: {
-            // Update this based on your association logic
+            trucks: foodTruck._id,
           },
         }
       );
