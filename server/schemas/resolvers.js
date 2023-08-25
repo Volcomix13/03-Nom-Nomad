@@ -1,24 +1,26 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User, FoodTruck } = require('../models'); // Update the import here
+const { User, FoodTruck } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
     users: async () => {
-      return User.find().populate('foodTrucks'); // Update to 'foodTrucks'
+      return User.find().populate('foodTrucks');
     },
     user: async (parent, { username }) => {
-      return User.findOne({ username }).populate('foodTrucks'); // Update to 'foodTrucks'
+      return User.findOne({ username }).populate('foodTrucks');
     },
     foodTrucks: async () => {
-      return FoodTruck.find(); // Fetch all food trucks
+      return FoodTruck.find();
     },
     foodTruck: async (parent, { foodTruckId }) => {
-      return FoodTruck.findOne({ _id: foodTruckId }); // Fetch a single food truck
+      return FoodTruck.findOne({ _id: foodTruckId });
     },
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id }).populate('foodTrucks'); // Update to 'foodTrucks'
+        // Fetch the user based on the context's user information
+        const user = await User.findById(context.user._id);
+        return user;
       }
       throw new AuthenticationError('You need to be logged in!');
     },
@@ -57,7 +59,6 @@ const resolvers = {
     },
     // ... other resolvers if needed
   },
-
 };
 
 module.exports = resolvers;
