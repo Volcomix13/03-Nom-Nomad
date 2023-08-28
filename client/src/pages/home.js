@@ -3,10 +3,9 @@ import React from 'react';
 const Home = () => {
   return (
     <div className="home-container">
-      <header>
-        <h1>Welcome to NomNomad</h1>
-        <p>Discover Food Trucks Near You</p>
-      </header>
+      <div className="homePageHeader">
+        <h1>Find, Feast, Repeat!</h1>
+      </div>
 
       <section className="featured-food-trucks">
         <h2>Featured Food Trucks</h2>
