@@ -137,6 +137,17 @@ footer a{
   font-size: 20px;
 }
 
+#hp-truck-logo{
+  width: 18rem;
+  height: 18rem;
+  background-image: url("../public/food-truck.png");
+  background-size: 100%;
+  position: absolute;
+  left: 65%;
+  bottom: 35%;
+  z-index: -1;
+}
+
 
 .food-truck-search-container {
     padding: 20px;
