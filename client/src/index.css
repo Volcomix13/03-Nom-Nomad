@@ -18,14 +18,14 @@ body {
 
 h1 {
   font-family: 'Fredoka', sans-serif;
-  font-size: 32px;
+  font-size: 35px;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 20px; 
+  padding-left: 3rem; 
   background-color: var(--pear);
   color: var(--denim);
 }
@@ -48,14 +48,28 @@ nav ul a{
   font-size: 18px;
   justify-content: space-between;
 }
-/*  */
+/*  
+*/
 /* ------END HEADER STYLING----- */
+
+
+/* -------MAIN STYLING------- */
+/* 
+*/
 main {
   width: 100%;
+  margin-right: 20px;
+  margin-left: 20px;
   height: 80vh;
 }
+/* 
+*/
+/* ------END MAIN STYLING----- */
+
 
 /* -------FOOTER STYLING------- */
+/* 
+*/
 footer {
   display: flex;
   width: 100%;
@@ -75,6 +89,54 @@ footer a{
   font-size: 14px;
   justify-content: space-between;
 }
+/*  
+*/
+/* ------END FOOTER STYLING----- */
+
+
+/* ----HOME PAGE STYLING */
+/* 
+*/
+.home-container{
+  margin-left: 1.5rem;
+}
+
+#homePageHeader h1{
+  color: var(--pear);
+  font-size: 45px;
+  width: 20%;
+}
+
+#home-description{
+  color: var(--cream);
+  display: flex;
+  margin: 0;
+  width: 31%;
+  direction: initial;
+  line-height: 1.5; 
+  font-size: 15px;
+  font-family: 'Unbounded', sans-serif;
+}
+
+#home-auth-loggedout-btns{
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  margin-top: 1rem;
+}
+
+#home-login-btn,
+#home-signup-btn {
+  background-color: var(--pear);
+  color: var(--white);
+  border: 5px solid #ea9e11;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 20px;
+}
+
 
 .food-truck-search-container {
     padding: 20px;
