@@ -12,9 +12,9 @@ const Home = () => {
                 <h1>Find, Feast, Repeat!</h1>
             </div>
         
-            <!-- <section className="featured-food-trucks">
+            {/* <!-- <section className="featured-food-trucks">
                 <h2>Featured Food Trucks</h2>
-            </section> -->
+            </section> --> */}
         
             <section id="home-description">
                 <p><b>
