@@ -274,6 +274,15 @@ input::placeholder {
 }
 
 /* Sign up styling */
+#signup-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+}
 #signup-form {
   display: flex;
   flex-direction: row;
@@ -296,6 +305,20 @@ input::placeholder {
   cursor: pointer;
   font-family: 'Fredoka', sans-serif;
   font-size: 20px;
+}
+#signup-img {
+  background-color: var(--denim);
+  
+}
+#signup-drink{
+  background-image: url("../public/cold-drink.png");
+  margin-left: 7%;
+  margin-bottom: 7%;
+  background-size: 100%;
+  width: 15rem;
+  height: 15rem;
+  rotate: -15deg;
+  border: 1px var(--denim) !important;
 }
 
 /* .input-icons-signup i{
