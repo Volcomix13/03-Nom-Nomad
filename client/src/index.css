@@ -246,7 +246,7 @@ form {
   margin-left: 6.5%;
 }
 
-.input-icons {
+.input-icons, .input-icons-signup {
   width: 100%;
   margin-bottom: 10px;
 }
@@ -273,3 +273,32 @@ input::placeholder {
   font-family: 'Unbounded', sans-serif;
 }
 
+/* Sign up styling */
+#signup-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  
+}
+
+#sgnup-btn {
+  margin-top: 5%;
+}
+
+.signupbtn {
+  background-color: var(--pear);
+  color: var(--white);
+  border: 5px solid #ea9e11;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 20px;
+}
+
+/* .input-icons-signup i{
+  position: absolute;
+  margin-left: 6.5%;
+} */

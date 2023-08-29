@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
-import Auth from "../../utils/auth";
+// import Auth from "../utils/auth";
 
 const Header = () => {
     const logout = (event) => {
@@ -10,7 +10,7 @@ const Header = () => {
         Auth.logout();
     };
     return (
-        <header>
+        <div>
                 <nav>
                     <Link to="/">
                         <h1>NomNomad</h1>
@@ -28,7 +28,7 @@ const Header = () => {
                     </ul>
                 </nav>
                 
-        </header>
+        </div>
     );
 };
 
