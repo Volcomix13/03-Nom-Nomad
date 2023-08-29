@@ -127,7 +127,8 @@ footer a{
 }
 
 #home-login-btn,
-#home-signup-btn {
+#home-signup-btn,
+#login-submit {
   background-color: var(--pear);
   color: var(--white);
   border: 5px solid #ea9e11;
@@ -148,6 +149,7 @@ footer a{
   bottom: 35%;
   z-index: -1;
 }
+
 
 
 .food-truck-search-container {
@@ -190,6 +192,8 @@ footer a{
 
 
   /* login + signup styling */
+
+
 #login-container {
   display: flex;
   flex-direction: column;
@@ -203,20 +207,43 @@ footer a{
 
 #login-drink{
   margin-top: 5rem;
+  margin-left: 2%;
   background-image: url("../public/cold-drink.png");
   background-size: 100%;
   width: 10rem;
   height: 10rem;
+  rotate: -15deg;
 }
 
 #login-form{
   display: flex;
   flex-direction: row;
+  justify-content: center;
   margin-top: 5%;
+  margin-bottom: 5%;
+  width: 100%;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#email-input,
+#password-input {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  width: 50%;
+}
 .input-icons i {
   position: absolute;
+  margin-left: 6.5%;
 }
 
 .input-icons {
@@ -225,7 +252,24 @@ footer a{
 }
 
 .icon {
-  padding: 10px;
-  min-width: 10px;
-  color: var(--salmon);
+  padding: 11px;
+  margin: 0;
+  color: #ea9e11;
+  width: 319px;
 }
+input {
+  width: 70%;
+  padding-top: 10px;
+  padding-left: 35px;
+  padding-bottom: 10px;
+  background-color: var(--white);
+  border: 3px solid var(--white);
+  border-radius: 10px;
+  font-family: 'Unbounded', sans-serif;
+}
+
+input::placeholder {
+  color: var(--denim);
+  font-family: 'Unbounded', sans-serif;
+}
+
