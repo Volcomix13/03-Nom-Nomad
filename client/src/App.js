@@ -12,6 +12,11 @@ import Home from './pages/home.js';
 import Login from './pages/login.js';
 import Signup from './pages/signup.js';
 import Logout from './pages/logout.js';
+import Header from './components/Header.js';
+import Footer from './components/Footer.js';
+import FoodTruckSearch from './components/FoodTruckSearch';
+import LocationSearch from './components/locationsearch.js';
+import Map from './components/Map.js';
 
 const httpLink = createHttpLink({
     uri: '/graphql',
@@ -40,7 +45,7 @@ function App() {
                     <Header />
                     <div className="container">
                         <Routes>
-                            <Route path="/" element={<Home />} />
+                            <Route path="/home" element={<Home />} />
                             <Route path="/login" element={<Login />} />
                             <Route path="/logout" element={<Logout />}/>
                             <Route path="/signup" element={<Signup />} />
@@ -50,7 +55,7 @@ function App() {
                             {/* don't think we need this <Route path="thoughts/:thoughtId" element={<SingleThought />} /> */}
                         </Routes>
                     </div>
-                    <Footer />
+                    <Footer/>
                 </div>
             </Router>
         </ApolloProvider>
