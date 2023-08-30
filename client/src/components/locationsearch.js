@@ -14,13 +14,15 @@ const LocationSearch = () => {
  // add other functions if needed here 
 
   return (
-    <GeoapifyContext apiKey="2572cdb6e6ff4627b25d413527387788">
-      <GeoapifyGeocoderAutocomplete
-        placeSelect={onPlaceSelect}
-        suggestionsChange={onSuggestionChange}
-        // other props...
-      />
-    </GeoapifyContext>
+    <section id="location-search-input">
+      <GeoapifyContext apiKey="2572cdb6e6ff4627b25d413527387788">
+        <GeoapifyGeocoderAutocomplete
+          placeSelect={onPlaceSelect}
+          suggestionsChange={onSuggestionChange}
+          // other props...
+        />
+      </GeoapifyContext>
+    </section>
   );
 };
 

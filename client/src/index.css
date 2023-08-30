@@ -340,7 +340,7 @@ input::placeholder {
 
 #fav-trucks,
 #review-container {
-  background-color: var(--cream);
+  background-color: var(--white);
   width: 250px;
   height: auto;
   border: 5px solid var(--pear);
@@ -390,8 +390,8 @@ input::placeholder {
 }
 #truck-search input {
   width: 55%;
-  background-color: var(--cream);
-  color: var(--denim);
+  background-color: var(--white);
+  color: var(--crystal);
   border: 3px solid var(--pear);
   border-radius: 15px;
 }
@@ -409,14 +409,14 @@ input::placeholder {
 /* search filter */
 
 #filter-by {
-  color: var(--cream);
+  color: var(--white);
   font-family: 'Fredoka', sans-serif;
   font-size: 20px;
 }
 
 #filter-by select {
-  background-color: var(--cream);
-  color: var(--denim);
+  background-color: var(--white);
+  color: var(--crystal);
   font-weight: bold;
   border: 3px solid var(--pear);
   border-radius: 15px;
@@ -438,7 +438,7 @@ input::placeholder {
 #truck-list li {
   font-family: 'Unbounded', sans-serif;
   color: var(--crystal);
-  background-color: var(--cream);
+  background-color: var(--white);
   height: auto;
   border: 5px solid var(--pear);
   border-radius: 15px;
@@ -446,4 +446,35 @@ input::placeholder {
   flex-direction: column;
   justify-content: center;
   padding: 2%;
+}
+
+/* Map section */
+
+#map-sect {
+  background-color: var(--white);
+  width: 315px;
+  height: 315px;
+  border: 5px solid var(--pear);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 1.5%;
+  margin-left: 10%;
+  margin-bottom: 5%;
+}
+
+#location-search-input {
+  padding-left: 0 !important;
+  color: var(--crystal) !important;
+}
+
+#location-search-input input{
+  background-color: var(--white);
+  border: 5px solid var(--pear);
+  border-radius: 15px;
+  min-width: 300px;
+  margin-left: 10%;
+  padding-left: 5%;
+  color: var(--crystal) !important;
 }
