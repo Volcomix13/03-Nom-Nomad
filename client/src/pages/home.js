@@ -4,7 +4,7 @@ import Header from '../components/Header.js';
 const Home = () => {
   return (
     <div>
-    < Header />
+    {/* < Header /> */}
     <main>
     <div class="home-container">
         <container id="home-page-auth-loggedout-left">

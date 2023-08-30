@@ -12,6 +12,8 @@ import Home from './pages/home.js';
 import Login from './pages/login.js';
 import Signup from './pages/signup.js';
 import Logout from './pages/logout.js';
+import Header from './components/Header.js';
+import Footer from './components/Footer.js';
 
 const httpLink = createHttpLink({
     uri: '/graphql',
@@ -44,8 +46,8 @@ function App() {
                             <Route path="/login" element={<Login />} />
                             <Route path="/logout" element={<Logout />}/>
                             <Route path="/signup" element={<Signup />} />
-                            <Route path="/me" element={<Profile />} />
-                            <Route path="/profile/:username" element={<Profile />} />
+                            {/* <Route path="/me" element={<Profile />} />
+                            <Route path="/profile/:username" element={<Profile />} /> */}
                             {/* Uncomment this route when you're ready (probably dont need this line either)*/}
                             {/* don't think we need this <Route path="thoughts/:thoughtId" element={<SingleThought />} /> */}
                         </Routes>
