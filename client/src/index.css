@@ -326,7 +326,36 @@ input::placeholder {
   border: 1px var(--denim) !important;
 }
 
-/* .input-icons-signup i{
-  position: absolute;
-  margin-left: 6.5%;
-} */
+/* end of signup */
+
+/* ---dashboard styling---- */
+
+#fav-trucks,
+#review-container {
+  background-color: var(--cream);
+  width: 20%;
+  height: auto;
+  border: 5px solid var(--pear);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 1.5%;
+  margin: 2%;
+  margin-left: 2%;
+}
+
+#fav-trucks h3,
+#review-container h3 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 30px;
+  color: var(--crystal);
+  display: flex;
+  justify-content: center;
+}
+
+#fav-trucks ul,
+#review-container ul {
+  width: fit-content;
+  color: var(--crystal);
+}
