@@ -69,7 +69,7 @@
                 <button id="dashboard-search-btn" onClick={this.handleSearch}>Search</button>
                 </div>
             </div>
-            <div className="filter-by-cuisine">
+            <div className="filter-by-cuisine" id="filter-by">
             <label>Filter by Cuisine:</label>
             <select value={selectedCuisine} onChange={this.handleCuisineChange}>
                 <option value="All">All</option>
@@ -80,10 +80,10 @@
                 ))}
             </select>
             </div>
-            <div className="food-truck-list">
+            <div className="food-truck-list" id="truck-list">
             <h3>Food Trucks</h3>
             <ul>
-                {foodTrucks
+                <!-- {foodTrucks
                 .filter((truck) => {
                     if (selectedCuisine === 'All') {
                     return true; // Show all food trucks if "All" is selected
@@ -91,11 +91,11 @@
                     return truck.cuisine === selectedCuisine;
                     }
                 })
-                .map((truck) => (
+                .map((truck) => ( -->
                     <li key={truck.id}>
                     <strong>{truck.name}</strong> - {truck.cuisine}
                     </li>
-                ))}
+                <!-- ))} -->
             </ul>
             </div>
         </div>
