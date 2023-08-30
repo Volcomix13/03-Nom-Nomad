@@ -40,12 +40,12 @@ const Home = () => {
         ) : (
             <> 
             <div id='logged-in-view'>
-            < Dashboard />
-            < FoodTruckSearch />
-            <div>
-            < Map />
-            < LocationSearch />
-            </div>
+                < Dashboard />
+                < FoodTruckSearch />
+                <div>
+                    < Map />
+                    < LocationSearch />
+                </div>
             </div>
             </>)}
         </main>
