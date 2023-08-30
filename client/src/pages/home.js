@@ -26,6 +26,7 @@ const Home = () => {
                     </b></p>
                 </section>
 
+
                 <section id="home-auth-loggedout-btns">
                     <button id="home-login-btn">Login</button>
                     <button id="home-signup-btn">Signup</button>

@@ -14,9 +14,6 @@ import Signup from './pages/signup.js';
 import Logout from './pages/logout.js';
 import Header from './components/Header.js';
 import Footer from './components/Footer.js';
-import FoodTruckSearch from './components/FoodTruckSearch';
-import LocationSearch from './components/locationsearch.js';
-import Map from './components/Map.js';
 
 const httpLink = createHttpLink({
     uri: '/graphql',
