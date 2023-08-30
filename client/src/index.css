@@ -16,6 +16,10 @@ body {
 /* -------HEADER STYLING------- */
 /*  */
 
+header {
+  width: 100%;
+}
+
 h1 {
   font-family: 'Fredoka', sans-serif;
   font-size: 35px;
@@ -38,7 +42,7 @@ nav ul {
 }
 
 nav ul li {
-  margin-right: 20px;
+  padding-right: 20px;
   font-family: 'Fredoka', sans-serif;
 }
 

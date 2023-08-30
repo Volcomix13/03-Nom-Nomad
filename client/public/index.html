@@ -25,6 +25,37 @@
                 </ul>
             </nav>
         </header>
+        <!-- DASHBOARD COMPONENT -->
+        <main>
+        <div className="dashboard-container">
+            <h2>Dashboard</h2>
+    
+            <section className="favorite-food-trucks">
+            <h3>Favorite Food Trucks</h3>
+            <ul>
+                {favoriteFoodTrucks.map((truck) => (
+                <li key={truck.id}>
+                    <strong>{truck.name}</strong> - {truck.cuisine}
+                </li>
+                ))}
+            </ul>
+            </section>
+    
+            <section className="recent-reviews">
+            <h3>Recent Reviews</h3>
+            <ul>
+                {recentReviews.map((review) => (
+                <li key={review.id}>
+                    <strong>{review.foodTruckName}</strong>
+                    <div>Rating: {review.rating}</div>
+                    <div>{review.comment}</div>
+                </li>
+                ))}
+            </ul>
+            </section>
+        </div>
+    </main>
+        <!-- END DASHBOARD COMPONENT -->
         
     <!-- <div id="root"></div> -->
     <footer>
