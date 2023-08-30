@@ -328,12 +328,20 @@ input::placeholder {
 
 /* end of signup */
 
+/* logged in view */
+#logged-in-view{
+  display: flex;
+  flex-direction: row;
+  margin-top: 3%;
+}
+
+
 /* ---dashboard styling---- */
 
 #fav-trucks,
 #review-container {
   background-color: var(--cream);
-  width: 20%;
+  width: 250px;
   height: auto;
   border: 5px solid var(--pear);
   border-radius: 15px;
@@ -341,7 +349,7 @@ input::placeholder {
   flex-direction: column;
   justify-content: center;
   padding-bottom: 1.5%;
-  margin: 2%;
+  margin: 5%;
   margin-left: 2%;
 }
 
@@ -357,5 +365,44 @@ input::placeholder {
 #fav-trucks ul,
 #review-container ul {
   width: fit-content;
-  color: var(--crystal);
+  color: var(--crystal)
+}
+
+/* SEARCH */
+#truck-search {
+  width: 578px;
+  padding-left: 5%;
+}
+#search-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+#truck-search h2 {
+  font-family: 'Fredoka', sans-serif;
+  color: var(--pear);
+  font-size: 35px;
+}
+#dashboard-search-bar {
+  margin-top: 2%;
+}
+#truck-search input {
+  width: 55%;
+  background-color: var(--cream);
+  color: var(--denim);
+  border: 3px solid var(--pear);
+  border-radius: 15px;
+}
+
+#dashboard-search-btn {
+  background-color: var(--pear);
+  color: var(--white);
+  border: 3px solid #ea9e11;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 15px;  
+
 }

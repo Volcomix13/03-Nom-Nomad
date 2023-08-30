@@ -11,7 +11,7 @@ const Home = () => {
         <div>
         < Header />
         <main>
-        {Auth.loggedIn() ? (
+        {Auth.loggedOut() ? (
         <div class="home-container">
             <container id="home-page-auth-loggedout-left">
                 <div id="homePageHeader">
@@ -53,11 +53,12 @@ const Home = () => {
             </div>
         ) : (
             <> 
+            <div id='logged-in-view'>
             < Dashboard />
             < Map />
             < FoodTruckSearch />
             < LocationSearch />
-
+            </div>
             </>)}
         </main>
         </div>
