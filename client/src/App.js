@@ -42,7 +42,7 @@ function App() {
                     <Header />
                     <div className="container">
                         <Routes>
-                            <Route path="/" element={<Home />} />
+                            <Route path="/home" element={<Home />} />
                             <Route path="/login" element={<Login />} />
                             <Route path="/logout" element={<Logout />}/>
                             <Route path="/signup" element={<Signup />} />
@@ -52,7 +52,7 @@ function App() {
                             {/* don't think we need this <Route path="thoughts/:thoughtId" element={<SingleThought />} /> */}
                         </Routes>
                     </div>
-                    <Footer />
+                    <Footer/>
                 </div>
             </Router>
         </ApolloProvider>
