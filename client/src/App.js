@@ -14,9 +14,12 @@ import Signup from './pages/signup.js';
 // import Logout from './pages/logout.js';
 import Header from './components/Header.js';
 import Footer from './components/Footer.js';
+<<<<<<< HEAD
 // import FoodTruckSearch from './components/FoodTruckSearch';
 // import LocationSearch from './components/locationsearch.js';
 // import Map from './components/Map.js';
+=======
+>>>>>>> de7ae1d18bc3a97abb26de3bbe24696d7410af42
 
 const httpLink = createHttpLink({
     uri: '/graphql',

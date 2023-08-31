@@ -2,7 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
+<<<<<<< HEAD
 import Auth from "../utils/auth";
+=======
+
+// import Auth from "../utils/auth";
+>>>>>>> de7ae1d18bc3a97abb26de3bbe24696d7410af42
 
 const Header = () => {
     const logout = (event) => {
