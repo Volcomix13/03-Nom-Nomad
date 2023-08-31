@@ -1,50 +1,38 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
-class FoodTruckSearch extends Component {
-  constructor() {
-    super();
-    this.state = {
-      searchTerm: '',
-      selectedCuisine: 'All', // Default to show all cuisine categories
-      foodTrucks: [
-        { id: 1, name: 'Food Truck 1', cuisine: 'Mexican' },
-        { id: 2, name: 'Food Truck 2', cuisine: 'Italian' },
-        { id: 3, name: 'Food Truck 3', cuisine: 'Asian' },
-        { id: 4, name: 'Food Truck 4', cuisine: 'American' },
-        { id: 5, name: 'Food Truck 5', cuisine: 'Brunch' },
-        { id: 6, name: 'Food Truck 6', cuisine: 'Vegan' },
-        { id: 7, name: 'Food Truck 7', cuisine: 'Dessert' },
-        
-      ],
-    };
-  }
+function FoodTruckSearch() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCuisine, setSelectedCuisine] = useState('All');
+  const [foodTrucks, setFoodTrucks] = useState([
+    { id: 1, name: 'Food Truck 1', cuisine: 'Mexican' },
+    { id: 2, name: 'Food Truck 2', cuisine: 'Italian' },
+    { id: 3, name: 'Food Truck 3', cuisine: 'Asian' },
+    { id: 4, name: 'Food Truck 4', cuisine: 'American' },
+    { id: 5, name: 'Food Truck 5', cuisine: 'Brunch' },
+    { id: 6, name: 'Food Truck 6', cuisine: 'Vegan' },
+    { id: 7, name: 'Food Truck 7', cuisine: 'Dessert' },
+  ]);
 
-  handleSearchChange = (e) => {
-    this.setState({ searchTerm: e.target.value });
-  }
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
 
-  handleCuisineChange = (e) => {
-    this.setState({ selectedCuisine: e.target.value });
-  }
+  const handleCuisineChange = (e) => {
+    setSelectedCuisine(e.target.value);
+  };
 
-  handleSearch = () => {
-    const { searchTerm, selectedCuisine } = this.state;
-  
-   
+  const handleSearch = () => {
     const filteredFoodTrucks = foodTrucks.filter((truck) => {
       const matchesSearchTerm = truck.name.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCuisine = selectedCuisine === 'All' || truck.cuisine === selectedCuisine;
-  
+
       return matchesSearchTerm && matchesCuisine;
     });
-    this.setState({ foodTrucks: filteredFoodTrucks });
-  }
+    setFoodTrucks(filteredFoodTrucks);
+  };
+  
+  const cuisineCategories = [...new Set(foodTrucks.map((truck) => truck.cuisine))];
 
-  render() {
-    const { searchTerm, selectedCuisine, foodTrucks } = this.state;
-
-    // Create an array of unique cuisine categories from the food trucks data
-    const cuisineCategories = [...new Set(foodTrucks.map((truck) => truck.cuisine))];
 
     return (
       <div className="food-truck-search" id="truck-search">
