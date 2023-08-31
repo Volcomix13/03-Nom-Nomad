@@ -16,6 +16,10 @@ body {
 /* -------HEADER STYLING------- */
 /*  */
 
+header {
+  width: 100%;
+}
+
 h1 {
   font-family: 'Fredoka', sans-serif;
   font-size: 35px;
@@ -38,7 +42,7 @@ nav ul {
 }
 
 nav ul li {
-  margin-right: 20px;
+  padding-right: 20px;
   font-family: 'Fredoka', sans-serif;
 }
 
@@ -127,7 +131,8 @@ footer a{
 }
 
 #home-login-btn,
-#home-signup-btn {
+#home-signup-btn,
+#login-submit {
   background-color: var(--pear);
   color: var(--white);
   border: 5px solid #ea9e11;
@@ -148,6 +153,7 @@ footer a{
   bottom: 35%;
   z-index: -1;
 }
+
 
 
 .food-truck-search-container {
@@ -190,6 +196,8 @@ footer a{
 
 
   /* login + signup styling */
+
+
 #login-container {
   display: flex;
   flex-direction: column;
@@ -203,29 +211,270 @@ footer a{
 
 #login-drink{
   margin-top: 5rem;
+  margin-left: 2%;
   background-image: url("../public/cold-drink.png");
   background-size: 100%;
   width: 10rem;
   height: 10rem;
+  rotate: -15deg;
 }
 
 #login-form{
   display: flex;
   flex-direction: row;
+  justify-content: center;
   margin-top: 5%;
+  margin-bottom: 5%;
+  width: 100%;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#email-input,
+#password-input {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  width: 50%;
+}
 .input-icons i {
   position: absolute;
+  margin-left: 6.5%;
 }
 
-.input-icons {
+.input-icons, .input-icons-signup {
   width: 100%;
   margin-bottom: 10px;
 }
 
 .icon {
-  padding: 10px;
-  min-width: 10px;
-  color: var(--salmon);
+  padding: 11px;
+  margin: 0;
+  color: #ea9e11;
+  width: 319px;
+}
+input {
+  width: 70%;
+  padding-top: 10px;
+  padding-left: 35px;
+  padding-bottom: 10px;
+  background-color: var(--white);
+  border: 3px solid var(--white);
+  border-radius: 10px;
+  font-family: 'Unbounded', sans-serif;
+}
+
+input::placeholder {
+  color: var(--denim);
+  font-family: 'Unbounded', sans-serif;
+}
+
+/* Sign up styling */
+#signup-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+}
+#signup-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  
+}
+
+#sgnup-btn {
+  margin-top: 5%;
+  /* margin-bottom: 5%; */
+}
+
+.signupbtn {
+  background-color: var(--pear);
+  color: var(--white);
+  border: 5px solid #ea9e11;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 20px;
+}
+#signup-img {
+  background-color: var(--denim);
+  
+}
+#signup-drink{
+  background-image: url("../public/cold-drink.png");
+  margin-left: 7%;
+  margin-bottom: 7%;
+  background-size: 100%;
+  width: 15rem;
+  height: 15rem;
+  rotate: -15deg;
+  border: 1px var(--denim) !important;
+}
+
+/* end of signup */
+
+/* logged in view */
+#logged-in-view{
+  display: flex;
+  flex-direction: row;
+  margin-top: 3%;
+}
+
+
+/* ---dashboard styling---- */
+
+#fav-trucks,
+#review-container {
+  background-color: var(--white);
+  width: 250px;
+  height: auto;
+  border: 5px solid var(--pear);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 1.5%;
+  margin: 5%;
+  margin-left: 2%;
+}
+
+#fav-trucks h3,
+#review-container h3 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 30px;
+  color: var(--crystal);
+  display: flex;
+  justify-content: center;
+}
+
+#fav-trucks ul,
+#review-container ul {
+  width: fit-content;
+  color: var(--crystal)
+}
+
+/* SEARCH */
+/* search bar */
+#truck-search {
+  width: 555px;
+  padding-left: 5%;
+}
+#search-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+#truck-search h2 {
+  font-family: 'Fredoka', sans-serif;
+  color: var(--pear);
+  font-size: 30px;
+}
+#dashboard-search-bar {
+  margin-top: 2%;
+}
+#truck-search input {
+  width: 55%;
+  background-color: var(--white);
+  color: var(--crystal);
+  border: 3px solid var(--pear);
+  border-radius: 15px;
+}
+
+#dashboard-search-btn {
+  background-color: var(--pear);
+  color: var(--white);
+  border: 3px solid #ea9e11;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 15px;  
+}
+/* search filter */
+
+#filter-by {
+  color: var(--white);
+  font-family: 'Fredoka', sans-serif;
+  font-size: 20px;
+}
+
+#filter-by select {
+  background-color: var(--white);
+  color: var(--crystal);
+  font-weight: bold;
+  border: 3px solid var(--pear);
+  border-radius: 15px;
+  font-family: 'Unbounded', sans-serif;
+}
+
+/* search truck list */
+
+#truck-list h3 {
+  font-family: 'Fredoka', sans-serif;
+  color: var(--pear)
+}
+
+#truck-list ul {
+  padding: 0;
+  width: 98%;
+}
+
+#truck-list li {
+  font-family: 'Unbounded', sans-serif;
+  color: var(--crystal);
+  background-color: var(--white);
+  height: auto;
+  border: 5px solid var(--pear);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2%;
+}
+
+/* Map section */
+
+#map-sect {
+  background-color: var(--white);
+  width: 315px;
+  height: 315px;
+  border: 5px solid var(--pear);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 1.5%;
+  margin-left: 10%;
+  margin-bottom: 5%;
+}
+
+#location-search-input {
+  padding-left: 0 !important;
+  color: var(--crystal) !important;
+}
+
+#location-search-input input{
+  background-color: var(--white);
+  border: 5px solid var(--pear);
+  border-radius: 15px;
+  min-width: 300px;
+  margin-left: 10%;
+  padding-left: 5%;
+  color: var(--crystal) !important;
 }
