@@ -375,7 +375,7 @@ input::placeholder {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  
+  height: 100%;
 }
 
 #db-truck-logo {
@@ -383,10 +383,11 @@ input::placeholder {
   height: 12rem;
   background-image: url("../public/food-truck.png");
   background-size: 100%;
-  position: absolute;
+  position: relative;
   left: 10.5%;
   bottom: 54%;
   z-index: -1;
+  margin: 0;
 }
 
 #favs-reviews {
