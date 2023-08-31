@@ -259,16 +259,19 @@ form {
   margin-right: 5%;
 }
 
-#email-input,
-#password-input {
+
+#password-input,
+#email-input {
+  position: relative;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   margin-top: 5%;
   width: 50%;
 }
 .input-icons i {
-  position: absolute;
-  margin-left: 6.5%;
+  margin-left: 1%;
+  position: absolute; 
+  
 }
 
 .input-icons, .input-icons-signup {
