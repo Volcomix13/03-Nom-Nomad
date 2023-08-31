@@ -14,6 +14,7 @@ const Dashboard = () => {
 
     return (
         <div className="dashboard-container">
+            <div id="db-truck-logo"> </div>
             <div id="favs-reviews">
                 <div className="favorite-food-trucks" id="fav-trucks">
                 <h3>Favorites</h3>

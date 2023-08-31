@@ -378,6 +378,17 @@ input::placeholder {
   
 }
 
+#db-truck-logo {
+  width: 12rem;
+  height: 12rem;
+  background-image: url("../public/food-truck.png");
+  background-size: 100%;
+  position: absolute;
+  left: 10.5%;
+  bottom: 54%;
+  z-index: -1;
+}
+
 #favs-reviews {
   height: 89%;
 }
@@ -479,6 +490,10 @@ input::placeholder {
   font-size: 20px;
 }
 
+/* #filter-by option {
+  margin-left: 2%;
+} */
+
 #filter-by select {
   background-color: var(--white);
   color: var(--crystal);
@@ -486,6 +501,7 @@ input::placeholder {
   border: 3px solid var(--pear);
   border-radius: 15px;
   font-family: 'Unbounded', sans-serif;
+  margin-left: 2.35%;
 }
 
 /* search truck list */
