@@ -34,6 +34,7 @@ function Signup(props) {
     <main>
         <div className="container my-1">
             <div id="signup-container">
+                <div id="signup-drink"></div>
                 <form onSubmit={handleFormSubmit} id="signup-form">
                     <div className="input-icons-signup">
                         
@@ -91,8 +92,8 @@ function Signup(props) {
                         
                     </div>
                 </form>
-                <div id="signup-drink">
-                </div>
+                {/* <div id="signup-drink"> */}
+                {/* </div> */}
             </div>
         </div>  
     </main>

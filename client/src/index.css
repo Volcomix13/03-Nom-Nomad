@@ -323,8 +323,10 @@ input::placeholder {
 }
 
 #sgnup-btn {
+  display: flex;
+  justify-content: center;
+  width: 70%;
   margin-top: 5%;
-  /* margin-bottom: 5%; */
 }
 
 .signupbtn a {
@@ -624,6 +626,27 @@ input::placeholder {
   #home-signup-btn {
     width: 20%;
     margin: 5%;
+  }
+
+  /* signup page mobile */
+  #signup-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+  }
+
+  #signup-drink {
+    margin-top: 15%;
+    width: 12rem;
+    height: 12rem;
+  }
+
+  #sgnup-btn {
+    display: flex;
+    justify-content: center;
+    width: 89%;
+    margin-top: 25%;
   }
 
   footer {
