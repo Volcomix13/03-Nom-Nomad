@@ -9,6 +9,7 @@ const Home = () => {
         <div>
         <main>
         <div className="home-container">
+            <div id="hp-truck-logo"> </div>
             <div id="home-page-auth-loggedout-left">
                 <div id="homePageHeader">
                     <h1>Find, Feast, Repeat!</h1>
@@ -27,7 +28,7 @@ const Home = () => {
                     <Link to="/signup" id="home-signup-btn">Signup</Link>
                 </section>
             </div>
-            <div id="hp-truck-logo"> </div>
+            {/* <div id="hp-truck-logo"> </div> */}
             </div>
         </main>
         </div>

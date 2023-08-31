@@ -11,7 +11,7 @@ const Header = () => {
     //     Auth.logout();
     // };
     return (
-        <div>
+        <div id="headerBox">
                 <nav>
                     <Link to="/">
                         <h1>NomNomad</h1>

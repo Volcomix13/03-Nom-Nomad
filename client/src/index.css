@@ -569,3 +569,64 @@ input::placeholder {
   font-size: 15px;
   margin-left: -3.5%;
 }
+
+
+/* SMALL SCREENS */
+
+@media screen and (max-width: 600px) {
+/* header */
+  #headerBox {
+    display: none;
+  }
+  /* home screen */
+  .home-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+  }
+  #hp-truck-logo {
+    position: relative;
+    width: 50vw;
+    height: 50vw;
+    transform: translate(-118%, 0%);
+  }
+  #home-page-auth-loggedout-left {
+    width: 80%;
+  }
+  #homePageHeader {
+    display: flex;
+    justify-content: center;
+  }
+  #homePageHeader h1{
+    font-size: 25px;
+    width: 80%;
+    align-self: center;
+  }
+  #home-description{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 92%;
+    font-size: 12px;
+    margin: 0;
+    /* margin-top: 7rem; */
+    margin-bottom: 1rem;
+  }
+  #home-auth-loggedout-btns {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #home-login-btn, 
+  #home-signup-btn {
+    width: 20%;
+    margin: 5%;
+  }
+
+  footer {
+    display: none;
+  }
+}
