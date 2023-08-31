@@ -539,6 +539,7 @@ input::placeholder {
 /* mission statement */
 .missionContainer {
   width: 80%;
+  margin-left: 3%;
 }
 
 .missionContainer h1 {
