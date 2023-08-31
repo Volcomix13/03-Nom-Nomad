@@ -146,10 +146,14 @@ nav a {
 #home-auth-loggedout-btns a{
   text-decoration: none;
 }
+#login-submit a{
+  color: var(--white);
+  text-decoration: none;
+}
 
 #home-login-btn,
 #home-signup-btn,
-#login-submit {
+#login-submit{
   background-color: var(--pear);
   color: var(--white);
   border: 5px solid #ea9e11;
