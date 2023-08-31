@@ -536,3 +536,35 @@ input::placeholder {
   padding: 2%;
 }
 
+/* mission statement */
+.missionContainer {
+  width: 80%;
+}
+
+.missionContainer h1 {
+  font-family: 'Fredoka', sans-serif;
+  color: var(--pear);
+  font-size: 30px;
+  margin-top: 2%;
+}
+
+.missionContainer h3 {
+  font-family: 'Fredoka', sans-serif;
+  color: var(--pear);
+  font-size: 20px;
+  margin-top: 2%;
+}
+
+.missionContainer p {
+  font-family: 'Unbounded', sans-serif;
+  color: var(--cream);
+  font-size: 15px;
+}
+
+.missionContainer ul {
+  list-style: none;
+  font-family: 'Unbounded', sans-serif;
+  color: var(--cream);
+  font-size: 15px;
+  margin-left: -3.5%;
+}
