@@ -30,9 +30,7 @@ const Home = () => {
                     <Link to="/signup" id="home-signup-btn">Signup</Link>
                 </section>
             </div>
-            <div id="home-page-auth-loggedout-right">
-                <img id="hp-truck-logo"></img>
-            </div>
+            <div id="hp-truck-logo"> </div>
             </div>
         </main>
         </div>
