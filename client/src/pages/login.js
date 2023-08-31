@@ -30,7 +30,6 @@ function Login() {
   };
 
   return (
-    <div>
         <div className="container my-1" id="login-container">
         <div id="login-drink"></div>
           <form onSubmit={handleFormSubmit}>
@@ -61,11 +60,9 @@ function Login() {
                       onChange={handleChange}
                   />
                   </div>
-              </div>
-          </div>
-              {error ? (
-              <div>
-                  <p className="error-text">The provided credentials are incorrect</p>
+                  {error ? (
+            <div>
+            <p className="error-text">The provided credentials are incorrect</p>
               </div>
         ) : (null)}
         <div className="flex-row flex-end">

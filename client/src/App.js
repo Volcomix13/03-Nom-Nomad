@@ -54,8 +54,7 @@ function App() {
                                     <Route path="/logout" element={<Logout />}/>
                                     <Route path="/signup" element={<Signup />} /> 
                                     <Route path="/dashboard" element={<Dashboard />} />
-                                    {/* {/* <Route path="/me" element={<Profile />} />
-                                    <Route path="/profile/:username" element={<Profile />} /> */}
+                                
                                     {/* Uncomment this route when you're ready (probably dont need this line either)*/}
                                     {/* don't think we need this <Route path="thoughts/:thoughtId" element={<SingleThought />} /> */}
                         </Routes>
