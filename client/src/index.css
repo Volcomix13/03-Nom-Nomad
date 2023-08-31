@@ -285,6 +285,9 @@ form {
   color: #ea9e11;
   width: 319px;
 }
+#login-form input {
+  color: var(--denim);
+}
 input {
   width: 70%;
   padding-top: 10px;
@@ -292,6 +295,7 @@ input {
   padding-bottom: 10px;
   background-color: var(--white);
   border: 3px solid var(--white);
+  /* color: var(--denim); */
   border-radius: 10px;
   font-family: 'Unbounded', sans-serif;
 }
