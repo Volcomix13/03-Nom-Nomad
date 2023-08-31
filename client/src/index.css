@@ -456,12 +456,12 @@ input::placeholder {
 }
 
 #truck-search input[value]{
-  width: 55%;
+  width: 65%;
   background-color: var(--white);
   color: var(--crystal) !important;
   border: 3px solid var(--pear);
   border-radius: 15px;
-  margin-right: 4%;
+  margin-right: 5.25%;
 }
 
 .search-bar input {
