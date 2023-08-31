@@ -106,6 +106,19 @@ footer a{
   margin-left: 1.5rem;
 }
 
+nav h1 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 35px;
+  color: var(--denim);
+}
+
+nav a {
+  color: var(--denim);
+  text-decoration: none;
+  font-size: 18px;
+  justify-content: space-between;
+}
+
 #homePageHeader h1{
   color: var(--pear);
   font-size: 45px;
