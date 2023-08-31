@@ -243,6 +243,7 @@ nav a {
   margin-top: 5%;
   margin-bottom: 5%;
   width: 100%;
+  margin-left: 5%;
 }
 
 form {
@@ -657,13 +658,67 @@ input::placeholder {
     margin-top: 5%;
     margin-bottom: 5%;
     width: 100%;
+    margin-left: 0 !important;
   }
 
   #password-input, #email-input {
     width: 100%;
     margin-top: 20%;
+    
   }
 
+  /* dashboard styling */
+  .dashboard-container {
+    width: 100%;
+    flex-direction: column;
+  }
+  #favs-reviews {
+    display: flex;
+  }
+  #fav-trucks ul, #review-container ul {
+    display: none;
+  }
+  #fav-trucks, #review-container {
+    height: 35px;
+    padding: 2.5%;
+  }
+  #fav-trucks h3, #review-container h3 {
+    font-size: 25px;
+  }
+  #favs-reviews {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 35%;
+  }
+  #db-truck-logo {
+    width: 12rem;
+    height: 12rem;
+    bottom: 75%;
+    left: 24.427%;
+  }
+  #truck-search {
+    width: 100%;
+    padding-left: 0;
+    margin: 0;
+  }
+  #truck-search h2 {
+    font-size: 20px;
+  }
+  #dashboard-search-btn {
+    padding: 11px 9px;
+  }
+  #truck-search input[value] {
+    width: 50%;
+  }
+  #db-truck-logo {
+    position: absolute;
+  }
+  #search-row{
+    margin: 0;
+  }
+  #truck-list ul {
+    width: 97%;
+  }
   footer {
     display: none;
   }
