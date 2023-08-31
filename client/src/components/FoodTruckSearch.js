@@ -71,9 +71,12 @@ const FoodTruckSearch = () => {
                     }
                 })
                 .map((truck) => (
+                  <> 
                     <li key={truck.id}>
                     <strong>{truck.name}</strong> - {truck.cuisine}
                     </li>
+                    <br></br>
+                  </>
                 ))}
             </ul>
             </div>
