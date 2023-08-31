@@ -331,6 +331,11 @@ input::placeholder {
   /* margin-bottom: 5%; */
 }
 
+.signupbtn a {
+  color: var(--white);
+  text-decoration: none;
+}
+
 .signupbtn {
   background-color: var(--pear);
   color: var(--white);

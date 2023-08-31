@@ -91,8 +91,8 @@ function Signup(props) {
                         
                     </div>
                 </form>
-                <img id="signup-drink">
-                </img>
+                <div id="signup-drink">
+                </div>
             </div>
         </div>  
     </main>
