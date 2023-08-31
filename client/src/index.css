@@ -165,13 +165,13 @@ nav a {
 }
 
 #hp-truck-logo {
-  width: 18rem;
-  height: 18rem;
+  width: 25rem;
+  height: 25rem;
   background-image: url("../public/food-truck.png");
   background-size: 100%;
   position: absolute;
-  left: 65%;
-  bottom: 35%;
+  left: 55%;
+  bottom: 15%;
   z-index: -1;
 }
 
