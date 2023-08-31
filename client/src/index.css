@@ -309,20 +309,20 @@ input::placeholder {
 
 /* Sign up styling */
 #signup-container {
+  height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  padding: 2rem;
+  margin-bottom: 5rem;
 }
 #signup-form {
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-top: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 10%;
   
 }
 
@@ -345,6 +345,7 @@ input::placeholder {
   cursor: pointer;
   font-family: 'Fredoka', sans-serif;
   font-size: 20px;
+  margin-bottom: 5%;
 }
 #signup-img {
   background-color: var(--denim);
