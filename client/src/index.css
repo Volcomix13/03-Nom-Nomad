@@ -374,17 +374,19 @@ input::placeholder {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 100%;
+  margin-left: 3%;
+  margin-right: 3%;
 }
 
 #db-truck-logo {
-  width: 12rem;
-  height: 12rem;
+  width: 15rem;
+  height: 15rem;
   background-image: url("../public/food-truck.png");
   background-size: 100%;
   position: relative;
-  left: 10.5%;
+  left: 19.5%;
   bottom: 54%;
   z-index: -1;
   margin: 0;
@@ -397,9 +399,9 @@ input::placeholder {
 #fav-trucks,
 #review-container {
   background-color: var(--white);
-  width: 250px;
+  width: 100%;
   height: auto;
-  border: 5px solid var(--pear);
+  border: 8px solid var(--pear);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -423,13 +425,15 @@ input::placeholder {
 #review-container ul {
   width: fit-content;
   padding-right: 5%;
-  color: var(--crystal)
+  color: var(--crystal);
+  font-size: 16px;
+  font-family: 'Unbounded', sans-serif;
 }
 
 /* SEARCH */
 /* search bar */
 #truck-search {
-  width: 600px;
+  width: 55%;
   /* padding-left: 5%; */
   /* margin: 5%; */
 }
@@ -437,7 +441,7 @@ input::placeholder {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 9%;
 }
 #truck-search h2 {
