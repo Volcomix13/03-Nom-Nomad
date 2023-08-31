@@ -270,6 +270,7 @@ form {
 }
 .input-icons i {
   margin-left: 1%;
+  width: auto;
   position: absolute; 
   
 }
@@ -290,6 +291,7 @@ form {
 }
 input {
   width: 70%;
+  height: 20px;
   padding-top: 10px;
   padding-left: 35px;
   padding-bottom: 10px;
