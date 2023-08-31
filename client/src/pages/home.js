@@ -2,10 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 
 // import Auth from '../utils/auth.js';
-// import Dashboard from '../components/dashboard.js';
-// import FoodTruckSearch from '../components/FoodTruckSearch.js';
-// import LocationSearch from '../components/locationsearch.js';
-// import Map from '../components/Map.js';
+
 
 const Home = () => {
     return (

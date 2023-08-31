@@ -3,19 +3,16 @@ import FoodTruckSearch from '../components/FoodTruckSearch';
 
 const Dashboard = () => {
     const [favoriteFoodTrucks] = useState([
-        { id: 1, name: ' ', cuisine: ' ' }, 
-        { id: 2, name: ' ', cuisine: ' ' }, 
+        { id: 1, name: 'Vera Cruz Tacos', cuisine: ' Mexican ' }, 
+        { id: 2, name: 'Arlos', cuisine: ' Vegan' }, 
     ]);
 
     const [recentReviews] = useState([
-        { id: 1, foodTruckName: ' ', rating: 4, comment: ' ' },
-        { id: 2, foodTruckName: ' ', rating: 5, comment: ' ' },    
+        { id: 1, foodTruckName: 'Vegan Nom', rating: 4, comment: 'Delicious food, long lines on weekends tho ' },
+        { id: 2, foodTruckName: 'Milky Way Shakes ', rating: 5, comment: 'You HAVE to try the peach cobbler shake! ' },    
     ]);
 
     return (
-        // const { favoriteFoodTrucks, recentReviews } = this.state;
-
-        // return (
         <div className="dashboard-container">
             <div >
                 <div className="favorite-food-trucks" id="fav-trucks">
@@ -23,7 +20,10 @@ const Dashboard = () => {
                 <ul>
                 {favoriteFoodTrucks.map((truck) => (
                     <li key={truck.id}>
-                        <strong>{truck.name}</strong> - {truck.cuisine}
+                        <strong>{truck.name}</strong> 
+                        :{truck.cuisine}
+                        <br></br>
+                        <br></br>
                     </li>
                 ))}
                 </ul>
@@ -36,7 +36,8 @@ const Dashboard = () => {
                     <li key={review.id}>
                         <strong>{review.foodTruckName}</strong>
                         <div>Rating: {review.rating}</div>
-                        <div>{review.comment}</div>
+                        <div>- {review.comment}</div>
+                        <br></br>
                     </li>
                 ))}
                 </ul>

@@ -405,6 +405,7 @@ input::placeholder {
 #fav-trucks ul,
 #review-container ul {
   width: fit-content;
+  padding-right: 5%;
   color: var(--crystal)
 }
 
