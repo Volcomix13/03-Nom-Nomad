@@ -17,6 +17,8 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
-    "dotenv": "^16.3.1"
+    "@geoapify/react-geocoder-autocomplete": "^1.5.0",
+    "dotenv": "^16.3.1",
+    "react-leaflet": "^4.2.1"
   }
 }
