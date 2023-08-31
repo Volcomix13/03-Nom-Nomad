@@ -86,7 +86,7 @@ function Signup(props) {
                                 />
                             </div>
                             <div className="flex-row flex-end" id="sgnup-btn">
-                                <button type="submit" className="signupbtn">Sign Up</button>
+                                <button type="submit" className="signupbtn">< Link to="/dashboard">Sign Up</Link></button>
                             </div>
                         
                     </div>
