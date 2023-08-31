@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <div>
         <main>
-        <div class="home-container">
+        <div className="home-container">
             <div id="home-page-auth-loggedout-left">
                 <div id="homePageHeader">
                     <h1>Find, Feast, Repeat!</h1>
@@ -29,9 +29,7 @@ const Home = () => {
                 </section>
             </div>
             <div id="home-page-auth-loggedout-right">
-                <img>
-                    <div id="hp-truck-logo"></div>
-                </img>
+                <img id="hp-truck-logo"></img>
             </div>
             </div>
             {/* {Auth.loggedIn() ? (
