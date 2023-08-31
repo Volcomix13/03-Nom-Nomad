@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
 
@@ -32,17 +32,16 @@ function Login() {
   return (
     <div>
         <div className="container my-1" id="login-container">
-        
-          <image>
-              <div id="login-drink"></div>
-          </image>
+        <div>
+          <img id="login-drink"></img>
+          </div>
           <form onSubmit={handleFormSubmit}>
-              <div class="input-icons">
+              <div className="input-icons">
               <div id="login-form">
                   <div className="flex-row space-between my-2" id="email-input">
                   <label htmlFor="email"></label>
 
-                  <i class="fa fa-envelope icon"></i>
+                  <i className="fa fa-envelope icon"></i>
                   <input
 
                       placeholder="Email"
@@ -54,7 +53,7 @@ function Login() {
                   </div>
                   <div className="flex-row space-between my-2" id="password-input">
                   <label htmlFor="pwd"></label>
-                  <i class="fa fa-key icon">
+                  <i className="fa fa-key icon">
                   </i>
                   <input
                       placeholder="Password"
@@ -72,9 +71,10 @@ function Login() {
               </div>
         ) : (null)}
         <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
+          <button type="submit" id="login-submit">Login</button>
         </div>
       </form>
+    </div>
     </div>
   );
 }
