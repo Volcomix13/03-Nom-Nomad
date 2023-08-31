@@ -8,13 +8,13 @@ const Dashboard = () => {
     ]);
 
     const [recentReviews] = useState([
-        { id: 1, foodTruckName: 'Vegan Nom', rating: 4, comment: 'Delicious food, long lines on weekends tho ' },
+        { id: 1, foodTruckName: 'Vegan Nom', rating: 4 , comment: 'Delicious food, long lines on weekends tho ' },
         { id: 2, foodTruckName: 'Milky Way Shakes ', rating: 5, comment: 'You HAVE to try the peach cobbler shake! ' },    
     ]);
 
     return (
         <div className="dashboard-container">
-            <div >
+            <div id="favs-reviews">
                 <div className="favorite-food-trucks" id="fav-trucks">
                 <h3>Favorites</h3>
                 <ul>

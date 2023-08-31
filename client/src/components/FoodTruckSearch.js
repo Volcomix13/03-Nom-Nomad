@@ -4,13 +4,13 @@ const FoodTruckSearch = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCuisine, setSelectedCuisine] = useState('All');
   const [foodTrucks, setFoodTrucks] = useState([
-    { id: 1, name: 'Food Truck 1', cuisine: 'Mexican' },
-    { id: 2, name: 'Food Truck 2', cuisine: 'Italian' },
-    { id: 3, name: 'Food Truck 3', cuisine: 'Asian' },
-    { id: 4, name: 'Food Truck 4', cuisine: 'American' },
-    { id: 5, name: 'Food Truck 5', cuisine: 'Brunch' },
-    { id: 6, name: 'Food Truck 6', cuisine: 'Vegan' },
-    { id: 7, name: 'Food Truck 7', cuisine: 'Dessert' },
+    { id: 1, name: 'Vera Cruz Tacos', cuisine: 'Mexican' },
+    { id: 2, name: "Patrizi's", cuisine: 'Italian' },
+    { id: 3, name: 'Dee Dee', cuisine: 'Asian' },
+    { id: 4, name: 'Plow Burger', cuisine: 'American' },
+    { id: 5, name: 'Biscuits + Groovy', cuisine: 'Brunch' },
+    { id: 6, name: 'Vegan Nom', cuisine: 'Vegan' },
+    { id: 7, name: 'Milky Way Shakes', cuisine: 'Dessert' },
   ]);
 
   const handleSearchChange = (e) => {
