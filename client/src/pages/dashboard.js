@@ -16,8 +16,8 @@ const Dashboard = () => {
         // const { favoriteFoodTrucks, recentReviews } = this.state;
 
         // return (
-        <div>
-            <div className="dashboard-container">
+        <div className="dashboard-container">
+            <div >
                 <div className="favorite-food-trucks" id="fav-trucks">
                 <h3>Favorites</h3>
                 <ul>

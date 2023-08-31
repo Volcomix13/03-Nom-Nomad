@@ -338,6 +338,14 @@ input::placeholder {
 
 /* ---dashboard styling---- */
 
+.dashboard-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+
 #fav-trucks,
 #review-container {
   background-color: var(--white);
