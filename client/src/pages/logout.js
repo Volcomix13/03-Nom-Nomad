@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Redirect } from 'react-router-dom';
+import { redirect } from 'react-router-dom';
 
 const Logout = () => {
   const [isLoggedOut, setLoggedOut] = useState(false);
@@ -13,7 +13,7 @@ const Logout = () => {
 
   if (isLoggedOut) {
     // Redirect the user to the login page after successful logout
-    return <Redirect to="/login" />;
+    return redirect ("/login");
   }
 
   return (
