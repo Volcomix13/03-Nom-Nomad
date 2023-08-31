@@ -25,6 +25,7 @@ const FoodTruckSearch = () => {
     const filteredFoodTrucks = foodTrucks.filter((truck) => {
       const matchesSearchTerm = truck.name.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCuisine = selectedCuisine === 'All' || truck.cuisine === selectedCuisine;
+      // const matchesCuisineInput = truck.cuisine.toLowerCase().includes(searchTerm.toLowerCase());
 
       return matchesSearchTerm && matchesCuisine;
     });
@@ -41,7 +42,7 @@ const FoodTruckSearch = () => {
                 <div className="search-bar" id="dashboard-search-bar">
                 <input
                     type="text"
-                    placeholder="Search by name or cuisine"
+                    placeholder="Search by name"
                     value={searchTerm}
                     onChange={handleSearchChange}
                 />
@@ -51,7 +52,7 @@ const FoodTruckSearch = () => {
             <div className="filter-by-cuisine" id="filter-by">
             <label>Filter by Cuisine:</label>
             <select value={selectedCuisine} onChange={handleCuisineChange}>
-                <option value="All">All</option>
+                <option value="All">Filter</option>
                 {cuisineCategories.map((category) => (
                 <option key={category} value={category}>
                     {category}
