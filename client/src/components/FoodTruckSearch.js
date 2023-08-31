@@ -80,7 +80,6 @@ function FoodTruckSearch() {
         </div>
     );
   }
-}
 
 export default FoodTruckSearch;
 

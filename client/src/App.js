@@ -19,7 +19,7 @@ const httpLink = createHttpLink({
     uri: '/graphql',
 });
 
-const authLink = setcontext((_, { headers }) => {
+const authLink = setContext((_, { headers }) => {
     
     const token = localStorage.getItem('id_token');
 
@@ -49,8 +49,7 @@ function App() {
                                     <Route path="/login" element={<Login />} />
                                     <Route path="/logout" element={<Logout />}/>
                                     <Route path="/signup" element={<Signup />} />
-                                    <Route path="/me" element={<Profile />} />
-                                    <Route path="/profile/:username" element={<Profile />} />
+                                    
                                     {/* Uncomment this route when you're ready (probably dont need this line either)*/}
                                     {/* don't think we need this <Route path="thoughts/:thoughtId" element={<SingleThought />} /> */}
                         </Routes>
