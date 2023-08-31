@@ -32,9 +32,7 @@ function Login() {
   return (
     <div>
         <div className="container my-1" id="login-container">
-        <div>
-          <img id="login-drink"></img>
-          </div>
+        <div id="login-drink"></div>
           <form onSubmit={handleFormSubmit}>
               <div className="input-icons">
               <div id="login-form">
