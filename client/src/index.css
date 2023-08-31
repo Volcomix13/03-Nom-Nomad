@@ -143,6 +143,10 @@ nav a {
   margin-top: 1rem;
 }
 
+#home-auth-loggedout-btns a{
+  text-decoration: none;
+}
+
 #home-login-btn,
 #home-signup-btn,
 #login-submit {
