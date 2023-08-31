@@ -15,6 +15,7 @@ import Signup from './pages/signup.js';
 import Logout from './pages/logout.js';
 import Header from './components/Header.js';
 import Footer from './components/Footer.js';
+import Mission from './pages/mission.js';
 // import FoodTruckSearch from './components/FoodTruckSearch';
 // import LocationSearch from './components/locationsearch.js';
 // import Map from './components/Map.js';
@@ -54,7 +55,7 @@ function App() {
                                     <Route path="/logout" element={<Logout />}/>
                                     <Route path="/signup" element={<Signup />} /> 
                                     <Route path="/dashboard" element={<Dashboard />} />
-                                
+                                    <Route path="/mission" element={<Mission />} />
                                     {/* Uncomment this route when you're ready (probably dont need this line either)*/}
                                     {/* don't think we need this <Route path="thoughts/:thoughtId" element={<SingleThought />} /> */}
                         </Routes>
