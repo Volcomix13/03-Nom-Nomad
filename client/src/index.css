@@ -508,7 +508,9 @@ input::placeholder {
 
 #truck-list h3 {
   font-family: 'Fredoka', sans-serif;
-  color: var(--pear)
+  color: var(--pear);
+  font-size: 30px;
+  margin-top: 2%;
 }
 
 #truck-list ul {

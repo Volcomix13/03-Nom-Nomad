@@ -16,8 +16,8 @@ const Home = () => {
             
                 <div id="home-description">
                     <p><b>
-                    Welcome to your new go-to app for finding food trucks serving fresh flavors. 
-                    Explore a variety of cuisines and discover new flavors
+                    Get ready to chow down! Welcome to your new go-to app for finding food trucks serving up fresh flavors around Austin TX. 
+                    Satisfy your cravings and discover new flavors
                     in your own backyard!
                     </b></p>
                 </div>
