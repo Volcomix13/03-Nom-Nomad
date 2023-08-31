@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import FoodTruckSearch from '../components/FoodTruckSearch';
 
 const Dashboard = () => {
     const [favoriteFoodTrucks] = useState([
@@ -41,7 +42,10 @@ const Dashboard = () => {
                 </ul>
                 </div>
             </div>
+        
+        < FoodTruckSearch />
         </div>
+
     );
 }
 
