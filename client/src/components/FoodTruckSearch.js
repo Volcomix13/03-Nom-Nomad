@@ -28,54 +28,59 @@ function FoodTruckSearch() {
 
       return matchesSearchTerm && matchesCuisine;
     });
-    setFoodTrucks(filteredFoodTrucks);
-  };
+    this.setState({ foodTrucks: filteredFoodTrucks });
+  }
 
-  const cuisineCategories = [...new Set(foodTrucks.map((truck) => truck.cuisine))];
+  render() {
+    const { searchTerm, selectedCuisine, foodTrucks } = this.state;
 
-  return (
-    <div className="food-truck-search">
-      <h2>Find Food Trucks</h2>
-      <div className="search-bar">
-        <input
-          type="text"
-          placeholder="Search by name or cuisine"
-          value={searchTerm}
-          onChange={handleSearchChange} 
-        />
-        <button onClick={handleSearch}>Search</button>
-      </div>
-      <div className="filter-by-cuisine">
-        <label>Filter by Cuisine:</label>
-        <select value={selectedCuisine} onChange={handleCuisineChange}>
-          <option value="All">All</option>
-          {cuisineCategories.map((category) => (
-            <option key={category} value={category}>
-              {category}
-            </option>
-          ))}
-        </select>
-      </div>
-      <div className="food-truck-list">
-        <h3>Food Trucks</h3>
-        <ul>
-          {foodTrucks
-            .filter((truck) => {
-              if (selectedCuisine === 'All') {
-                return true; // Show all food trucks if "All" is selected
-              } else {
-                return truck.cuisine === selectedCuisine;
-              }
-            })
-            .map((truck) => (
-              <li key={truck.id}>
-                <strong>{truck.name}</strong> - {truck.cuisine}
-              </li>
+    // Create an array of unique cuisine categories from the food trucks data
+    const cuisineCategories = [...new Set(foodTrucks.map((truck) => truck.cuisine))];
+
+    return (
+      <div className="food-truck-search">
+        <h2>Find Food Trucks</h2>
+        <div className="search-bar">
+          <input
+            type="text"
+            placeholder="Search by name or cuisine"
+            value={searchTerm}
+            onChange={this.handleSearchChange}
+          />
+          <button onClick={this.handleSearch}>Search</button>
+        </div>
+        <div className="filter-by-cuisine">
+          <label>Filter by Cuisine:</label>
+          <select value={selectedCuisine} onChange={this.handleCuisineChange}>
+            <option value="All">All</option>
+            {cuisineCategories.map((category) => (
+              <option key={category} value={category}>
+                {category}
+              </option>
             ))}
-        </ul>
+          </select>
+        </div>
+        <div className="food-truck-list">
+          <h3>Food Trucks</h3>
+          <ul>
+            {foodTrucks
+              .filter((truck) => {
+                if (selectedCuisine === 'All') {
+                  return true; // Show all food trucks if "All" is selected
+                } else {
+                  return truck.cuisine === selectedCuisine;
+                }
+              })
+              .map((truck) => (
+                <li key={truck.id}>
+                  <strong>{truck.name}</strong> - {truck.cuisine}
+                </li>
+              ))}
+          </ul>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default FoodTruckSearch;
