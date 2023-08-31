@@ -9,6 +9,7 @@ import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/home.js';
+import Dashboard from './pages/dashboard.js';
 import Login from './pages/login.js';
 import Signup from './pages/signup.js';
 import Logout from './pages/logout.js';
@@ -52,6 +53,7 @@ function App() {
                                     <Route path="/login" element={<Login />} />
                                     <Route path="/logout" element={<Logout />}/>
                                     <Route path="/signup" element={<Signup />} /> 
+                                    <Route path="/dashboard" element={<Dashboard />} />
                                     {/* {/* <Route path="/me" element={<Profile />} />
                                     <Route path="/profile/:username" element={<Profile />} /> */}
                                     {/* Uncomment this route when you're ready (probably dont need this line either)*/}
