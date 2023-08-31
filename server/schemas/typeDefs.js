@@ -14,7 +14,10 @@ const typeDefs = gql`
     email: String!
  # favorites:  add favorites here(have to figure out the logistics with favorites)
   }
-
+  type Auth {
+    token: ID!
+    user: User! 
+  }
   type Query {
     foodTrucks: [FoodTruck]
     foodTruck(foodTruckId: ID!): FoodTruck
@@ -27,8 +30,8 @@ const typeDefs = gql`
   type Mutation {
     addFoodTruck(name: String!, cuisine: String!, location: String!): FoodTruck
     # Add user mutations here
-    addUser(username: String!, email: String!, password: String!): User
-    login(email: String!, password: String!): User
+    addUser(username: String!, email: String!, password: String!): Auth
+    login(email: String!, password: String!): Auth
   }
 `;
 
