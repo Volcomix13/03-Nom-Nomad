@@ -33,13 +33,14 @@ function Signup(props) {
   return (
     <main>
         <div className="container my-1">
-            <container id="signup-container">
+            <div id="signup-container">
+                <div id="signup-drink"></div>
                 <form onSubmit={handleFormSubmit} id="signup-form">
-                    <div class="input-icons-signup">
+                    <div className="input-icons-signup">
                         
                             <div className="flex-row space-between my-2">
                                 <label htmlFor="firstName"></label>
-                                <i class="fa fa-user icon">
+                                <i className="fa fa-user icon">
                                 </i>
                                 <input
                                 placeholder="First Name"
@@ -51,7 +52,7 @@ function Signup(props) {
                             </div>
                             <div className="flex-row space-between my-2">
                                 <label htmlFor="lastName"></label>
-                                <i class="fa fa-user icon">
+                                <i className="fa fa-user icon">
                                 </i>
                                 <input
                                 placeholder="Last Name"
@@ -63,7 +64,7 @@ function Signup(props) {
                             </div>
                             <div className="flex-row space-between my-2">
                                 <label htmlFor="email"></label>
-                                <i class="fa fa-envelope icon">
+                                <i className="fa fa-envelope icon">
                                 </i>
                                 <input
                                 placeholder="Email"
@@ -75,7 +76,7 @@ function Signup(props) {
                             </div>
                             <div className="flex-row space-between my-2">
                                 <label htmlFor="pwd"></label>
-                                <i class="fa fa-key icon">
+                                <i className="fa fa-key icon">
                                 </i>
                                 <input
                                 placeholder="Password"
@@ -86,15 +87,14 @@ function Signup(props) {
                                 />
                             </div>
                             <div className="flex-row flex-end" id="sgnup-btn">
-                                <button type="submit" class="signupbtn">Sign Up</button>
+                                <button type="submit" className="signupbtn">< Link to="/dashboard">Sign Up</Link></button>
                             </div>
                         
                     </div>
                 </form>
-                <image>
-                    <div id="signup-drink"></div>
-                </image>
-            </container>
+                {/* <div id="signup-drink"> */}
+                {/* </div> */}
+            </div>
         </div>  
     </main>
   );

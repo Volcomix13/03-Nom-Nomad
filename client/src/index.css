@@ -106,6 +106,19 @@ footer a{
   margin-left: 1.5rem;
 }
 
+nav h1 {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 35px;
+  color: var(--denim);
+}
+
+nav a {
+  color: var(--denim);
+  text-decoration: none;
+  font-size: 18px;
+  justify-content: space-between;
+}
+
 #homePageHeader h1{
   color: var(--pear);
   font-size: 45px;
@@ -130,9 +143,17 @@ footer a{
   margin-top: 1rem;
 }
 
+#home-auth-loggedout-btns a{
+  text-decoration: none;
+}
+#login-submit a{
+  color: var(--white);
+  text-decoration: none;
+}
+
 #home-login-btn,
 #home-signup-btn,
-#login-submit {
+#login-submit{
   background-color: var(--pear);
   color: var(--white);
   border: 5px solid #ea9e11;
@@ -143,14 +164,14 @@ footer a{
   font-size: 20px;
 }
 
-#hp-truck-logo{
-  width: 18rem;
-  height: 18rem;
+#hp-truck-logo {
+  width: 25rem;
+  height: 25rem;
   background-image: url("../public/food-truck.png");
   background-size: 100%;
   position: absolute;
-  left: 65%;
-  bottom: 35%;
+  left: 55%;
+  bottom: 15%;
   z-index: -1;
 }
 
@@ -181,18 +202,14 @@ footer a{
     border-radius: 3px;
   }
   
-  button {
+  /* button {
     background-color: #007bff;
     color: white;
     border: none;
     border-radius: 3px;
     padding: 10px 20px;
     cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
+  } */
 
 
   /* login + signup styling */
@@ -226,6 +243,7 @@ footer a{
   margin-top: 5%;
   margin-bottom: 5%;
   width: 100%;
+  margin-left: 5%;
 }
 
 form {
@@ -238,16 +256,20 @@ form {
   margin-right: 5%;
 }
 
-#email-input,
-#password-input {
+
+#password-input,
+#email-input {
+  position: relative;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   margin-top: 5%;
   width: 50%;
 }
 .input-icons i {
-  position: absolute;
-  margin-left: 6.5%;
+  margin-left: 1%;
+  width: auto;
+  position: absolute; 
+  
 }
 
 .input-icons, .input-icons-signup {
@@ -261,13 +283,18 @@ form {
   color: #ea9e11;
   width: 319px;
 }
+#login-form input {
+  color: var(--denim) !important;
+}
 input {
   width: 70%;
+  height: 20px;
   padding-top: 10px;
   padding-left: 35px;
   padding-bottom: 10px;
   background-color: var(--white);
   border: 3px solid var(--white);
+  /* color: var(--crystal); */
   border-radius: 10px;
   font-family: 'Unbounded', sans-serif;
 }
@@ -279,26 +306,33 @@ input::placeholder {
 
 /* Sign up styling */
 #signup-container {
+  height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  padding: 2rem;
+  margin-bottom: 5rem;
 }
 #signup-form {
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-top: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 10%;
   
 }
 
 #sgnup-btn {
+  display: flex;
+  justify-content: center;
+  width: 70%;
   margin-top: 5%;
-  /* margin-bottom: 5%; */
+}
+
+.signupbtn a {
+  color: var(--white);
+  text-decoration: none;
 }
 
 .signupbtn {
@@ -310,6 +344,7 @@ input::placeholder {
   cursor: pointer;
   font-family: 'Fredoka', sans-serif;
   font-size: 20px;
+  margin-bottom: 5%;
 }
 #signup-img {
   background-color: var(--denim);
@@ -318,7 +353,7 @@ input::placeholder {
 #signup-drink{
   background-image: url("../public/cold-drink.png");
   margin-left: 7%;
-  margin-bottom: 7%;
+  margin-bottom: 15%;
   background-size: 100%;
   width: 15rem;
   height: 15rem;
@@ -338,17 +373,44 @@ input::placeholder {
 
 /* ---dashboard styling---- */
 
+.dashboard-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+#db-truck-logo {
+  width: 15rem;
+  height: 15rem;
+  background-image: url("../public/food-truck.png");
+  background-size: 100%;
+  position: relative;
+  left: 19.5%;
+  bottom: 54%;
+  z-index: -1;
+  margin: 0;
+}
+
+#favs-reviews {
+  height: 89%;
+}
+
 #fav-trucks,
 #review-container {
   background-color: var(--white);
-  width: 250px;
+  width: 100%;
   height: auto;
-  border: 5px solid var(--pear);
+  border: 8px solid var(--pear);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-bottom: 1.5%;
+  /* margin-top: 0 !important; */
   margin: 5%;
   margin-left: 2%;
 }
@@ -365,20 +427,25 @@ input::placeholder {
 #fav-trucks ul,
 #review-container ul {
   width: fit-content;
-  color: var(--crystal)
+  padding-right: 5%;
+  color: var(--crystal);
+  font-size: 16px;
+  font-family: 'Unbounded', sans-serif;
 }
 
 /* SEARCH */
 /* search bar */
 #truck-search {
-  width: 555px;
-  padding-left: 5%;
+  width: 55%;
+  /* padding-left: 5%; */
+  /* margin: 5%; */
 }
 #search-row{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin-top: 9%;
 }
 #truck-search h2 {
   font-family: 'Fredoka', sans-serif;
@@ -386,14 +453,31 @@ input::placeholder {
   font-size: 30px;
 }
 #dashboard-search-bar {
+  width: 100%;
   margin-top: 2%;
+  
 }
-#truck-search input {
-  width: 55%;
+
+#truck-search input::placeholder {
+  color: var(--crystal) !important;
+  font-family: 'Unbounded', sans-serif;
+}
+
+#truck-search input[value]{
+  width: 65%;
   background-color: var(--white);
-  color: var(--crystal);
+  color: var(--crystal) !important;
   border: 3px solid var(--pear);
   border-radius: 15px;
+  margin-right: 5.25%;
+}
+
+.search-bar input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  color: var(--crystal) !important;
 }
 
 #dashboard-search-btn {
@@ -414,6 +498,10 @@ input::placeholder {
   font-size: 20px;
 }
 
+/* #filter-by option {
+  margin-left: 2%;
+} */
+
 #filter-by select {
   background-color: var(--white);
   color: var(--crystal);
@@ -421,13 +509,16 @@ input::placeholder {
   border: 3px solid var(--pear);
   border-radius: 15px;
   font-family: 'Unbounded', sans-serif;
+  margin-left: 2.35%;
 }
 
 /* search truck list */
 
 #truck-list h3 {
   font-family: 'Fredoka', sans-serif;
-  color: var(--pear)
+  color: var(--pear);
+  font-size: 30px;
+  margin-top: 2%;
 }
 
 #truck-list ul {
@@ -448,33 +539,187 @@ input::placeholder {
   padding: 2%;
 }
 
-/* Map section */
-
-#map-sect {
-  background-color: var(--white);
-  width: 315px;
-  height: 315px;
-  border: 5px solid var(--pear);
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-bottom: 1.5%;
-  margin-left: 10%;
-  margin-bottom: 5%;
+/* mission statement */
+.missionContainer {
+  width: 80%;
+  margin-left: 3%;
 }
 
-#location-search-input {
-  padding-left: 0 !important;
-  color: var(--crystal) !important;
+.missionContainer h1 {
+  font-family: 'Fredoka', sans-serif;
+  color: var(--pear);
+  font-size: 30px;
+  margin-top: 2%;
 }
 
-#location-search-input input{
-  background-color: var(--white);
-  border: 5px solid var(--pear);
-  border-radius: 15px;
-  min-width: 300px;
-  margin-left: 10%;
-  padding-left: 5%;
-  color: var(--crystal) !important;
+.missionContainer h3 {
+  font-family: 'Fredoka', sans-serif;
+  color: var(--pear);
+  font-size: 20px;
+  margin-top: 2%;
+}
+
+.missionContainer p {
+  font-family: 'Unbounded', sans-serif;
+  color: var(--cream);
+  font-size: 15px;
+}
+
+.missionContainer ul {
+  list-style: none;
+  font-family: 'Unbounded', sans-serif;
+  color: var(--cream);
+  font-size: 15px;
+  margin-left: -3.5%;
+}
+
+
+/* SMALL SCREENS */
+
+@media screen and (max-width: 600px) {
+/* header */
+  #headerBox {
+    display: none;
+  }
+  /* home screen */
+  .home-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+  }
+  #hp-truck-logo {
+    position: relative;
+    width: 50vw;
+    height: 50vw;
+    transform: translate(-118%, 0%);
+  }
+  #home-page-auth-loggedout-left {
+    width: 80%;
+  }
+  #homePageHeader {
+    display: flex;
+    justify-content: center;
+  }
+  #homePageHeader h1{
+    font-size: 25px;
+    width: 80%;
+    align-self: center;
+  }
+  #home-description{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 92%;
+    font-size: 12px;
+    margin: 0;
+    /* margin-top: 7rem; */
+    margin-bottom: 1rem;
+  }
+  #home-auth-loggedout-btns {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #home-login-btn, 
+  #home-signup-btn {
+    width: 20%;
+    margin: 5%;
+  }
+
+  /* signup page mobile */
+  #signup-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+  }
+
+  #signup-drink {
+    margin-top: 15%;
+    width: 12rem;
+    height: 12rem;
+  }
+
+  #sgnup-btn {
+    display: flex;
+    justify-content: center;
+    width: 89%;
+    margin-top: 25%;
+  }
+
+  /* mobile login styling */
+  #login-form {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+    margin-left: 0 !important;
+  }
+
+  #password-input, #email-input {
+    width: 100%;
+    margin-top: 20%;
+    
+  }
+
+  /* dashboard styling */
+  .dashboard-container {
+    width: 100%;
+    flex-direction: column;
+  }
+  #favs-reviews {
+    display: flex;
+  }
+  #fav-trucks ul, #review-container ul {
+    display: none;
+  }
+  #fav-trucks, #review-container {
+    height: 35px;
+    padding: 2.5%;
+  }
+  #fav-trucks h3, #review-container h3 {
+    font-size: 25px;
+  }
+  #favs-reviews {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 35%;
+  }
+  #db-truck-logo {
+    width: 12rem;
+    height: 12rem;
+    bottom: 75%;
+    left: 24.427%;
+  }
+  #truck-search {
+    width: 100%;
+    padding-left: 0;
+    margin: 0;
+  }
+  #truck-search h2 {
+    font-size: 20px;
+  }
+  #dashboard-search-btn {
+    padding: 11px 9px;
+  }
+  #truck-search input[value] {
+    width: 50%;
+  }
+  #db-truck-logo {
+    position: absolute;
+  }
+  #search-row{
+    margin: 0;
+  }
+  #truck-list ul {
+    width: 97%;
+  }
+  footer {
+    display: none;
+  }
 }

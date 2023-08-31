@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 
-function FoodTruckSearch() {
+const FoodTruckSearch = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCuisine, setSelectedCuisine] = useState('All');
   const [foodTrucks, setFoodTrucks] = useState([
-    { id: 1, name: 'Food Truck 1', cuisine: 'Mexican' },
-    { id: 2, name: 'Food Truck 2', cuisine: 'Italian' },
-    { id: 3, name: 'Food Truck 3', cuisine: 'Asian' },
-    { id: 4, name: 'Food Truck 4', cuisine: 'American' },
-    { id: 5, name: 'Food Truck 5', cuisine: 'Brunch' },
-    { id: 6, name: 'Food Truck 6', cuisine: 'Vegan' },
-    { id: 7, name: 'Food Truck 7', cuisine: 'Dessert' },
+    { id: 1, name: 'Vera Cruz Tacos', cuisine: 'Mexican' },
+    { id: 2, name: "Patrizi's", cuisine: 'Italian' },
+    { id: 3, name: 'Dee Dee', cuisine: 'Asian' },
+    { id: 4, name: 'Plow Burger', cuisine: 'American' },
+    { id: 5, name: 'Biscuits + Groovy', cuisine: 'Brunch' },
+    { id: 6, name: 'Vegan Nom', cuisine: 'Vegan' },
+    { id: 7, name: 'Milky Way Shakes', cuisine: 'Dessert' },
   ]);
 
   const handleSearchChange = (e) => {
@@ -25,6 +25,7 @@ function FoodTruckSearch() {
     const filteredFoodTrucks = foodTrucks.filter((truck) => {
       const matchesSearchTerm = truck.name.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCuisine = selectedCuisine === 'All' || truck.cuisine === selectedCuisine;
+      // const matchesCuisineInput = truck.cuisine.toLowerCase().includes(searchTerm.toLowerCase());
 
       return matchesSearchTerm && matchesCuisine;
     });
@@ -41,17 +42,17 @@ function FoodTruckSearch() {
                 <div className="search-bar" id="dashboard-search-bar">
                 <input
                     type="text"
-                    placeholder="Search by name or cuisine"
+                    placeholder="Search by name"
                     value={searchTerm}
-                    onChange={this.handleSearchChange}
+                    onChange={handleSearchChange}
                 />
-                <button id="dashboard-search-btn" onClick={this.handleSearch}>Search</button>
+                <button id="dashboard-search-btn" onClick={handleSearch}>Search</button>
                 </div>
             </div>
             <div className="filter-by-cuisine" id="filter-by">
             <label>Filter by Cuisine:</label>
-            <select value={selectedCuisine} onChange={this.handleCuisineChange}>
-                <option value="All">All</option>
+            <select value={selectedCuisine} onChange={handleCuisineChange}>
+                <option value="All">Filter</option>
                 {cuisineCategories.map((category) => (
                 <option key={category} value={category}>
                     {category}
@@ -71,15 +72,19 @@ function FoodTruckSearch() {
                     }
                 })
                 .map((truck) => (
+                  <> 
                     <li key={truck.id}>
                     <strong>{truck.name}</strong> - {truck.cuisine}
                     </li>
+                    <br></br>
+                  </>
                 ))}
             </ul>
             </div>
         </div>
     );
-  }
+}
+
 
 export default FoodTruckSearch;
 
