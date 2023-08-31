@@ -354,7 +354,7 @@ input::placeholder {
 #signup-drink{
   background-image: url("../public/cold-drink.png");
   margin-left: 7%;
-  margin-bottom: 7%;
+  margin-bottom: 15%;
   background-size: 100%;
   width: 15rem;
   height: 15rem;
